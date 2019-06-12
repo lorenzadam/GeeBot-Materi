@@ -31,83 +31,52 @@
 					<h3>Membuat Lampu Berkedip</h3>
 					<h4>Pengenalan</h4>
 				</section>
+					<section data-background-image="../../assets/pic/back.svg">
+					<h1>Tujuan</h1>
+					<h4>Membuat lampu berkedip terus - menerus dengan jeda yang kita tentukan.</h4>
+				</section>
+				</section>
+					<section data-background-image="../../assets/pic/back.svg">
+					<h1>Alat yang dibutuhkan</h1>
+					<h4>1. Sebuah Arduino</h4>
+					<h4>2. Sebuah Shield</h4>
+					<h4>3. Sebuah Modul LED</h4>
+					<h4>4. Sebuah Kabel</h4>
+				</section>
+				</section>
+					<section data-background-image="../../assets/pic/back.svg">
+					<h1>Langkah pertama (Kesepakatan):</h1>
+					<h4>Kita harus sepakati terlebih dahulu pin yang akan kita pakai pada arduino untuk misi kali ini adalah pin 3 (pin boleh pada nomer berapa saja asalkan yang dipilih adalah PIN DIGITAL)</h4>
+				</section>
 				<section data-background-image="../../assets/pic/back.svg">
-					<h2>Cara Masukin Kode Program</h2>
-
-					<pre class="fragment"><code class="hljs" data-trim data-line-numbers="4,8-9">
-#define trigPin 10
-#define echoPin 13
- 
-float duration, distance;
- 
+					<h2>Langkah kedua (Pemasangan Komponen):</h2>
+					<h4>1. Sambungkan Shield dengan Arduino</h4>
+					<h4>2. Sambungkan Kabel dengan modul LED</h4>
+					<h4>3. Sambungkan Kabel yang telah terhubung dengan modul LED dengan PIN 3 pada Shield yang telah terpasang di Arduino</h4>
+				</section>
+				<section data-background-image="../../assets/pic/back.svg">
+					<h2>Langkah 4 (Pemrograman)</h2>
+					<h4>Masukan kode program dibawah</h4>
+					<pre class="fragment"><code class="hljs" data-trim data-line-numbers="">
 void setup() {
-  Serial.begin (9600);
-  pinMode(trigPin, OUTPUT);
-  pinMode(echoPin, INPUT);
+  pinMode(3, OUTPUT)
 }
  
 void loop() {  
-  digitalWrite(trigPin, LOW);
-  delayMicroseconds(2);
-  digitalWrite(trigPin, HIGH);
-  delayMicroseconds(10);
-  digitalWrite(trigPin, LOW);
- 
-  duration = pulseIn(echoPin, HIGH);
-  distance = (duration / 2) * 0.0343;
-
-  Serial.print("Distance = ");
-  if (distance >= 400 || distance <= 2) {
-     Serial.println("Out of range");
-  }
-  else {
-    Serial.print(distance);
-    Serial.println(" cm");
-    delay(500);
-  }
-  delay(500);
+  digitalWrite(3, HIGH);
+  delay(1000);
+  digitalWrite(3, LOW);
+  delay(1000);
 }
 											</code></pre>
 				</section>
 				<section data-background-image="../../assets/pic/back.svg">
-					<h2>Membuat Program Dengan <font style="color: rgb(255,165,88)">GeeBot</font></h2>
-					<p>Jangan khawatir, dengan menggunakan <font style="color: rgb(255,165,88);">GeeBot </font>, kamu dapat membuat program dengan blok-blok warna-warni.</p>
-					<p>Di dalam setiap blok ini memiliki perintah yang akurat sehingga kamu <font style="color: rgb(255,165,88)"><u>tidak perlu pusing menghafalkan perintah-perintah tersebut.</u></font></p>
-				</section>
-				<section data-background-image="../../assets/pic/back.svg">
-					<h2>Lalu bagaimana kita membuat robot?</h2>
-					<p>Untuk dapat membuat robot kamu terlebih dahulu harus paham mengenai algoritma</p>
-					<p><b>Algoritma adalah susunan langkah-langkah yang dibuat untuk menyelesaikan suatu perintah</b></p>
-					<h5 class="fragment">Mari kita lihat contoh kasus kak Rio membutuhkan remote TV tadi</h5>
-				</section>
-				<section data-background-image="../../assets/pic/back.svg">
-					<h2>Mari Pecahkan Menjadi Beberapa Langkah</h2>
-					<ol>
-						<li>Maju 5 langkah ke depan</li>
-						<li>Pegang remote dengan tangan kanan</li>
-						<li>Angkat tangan kanan yang memegang remote</li>
-						<li>Berbalik</li>
-						<li>Berjalan menuju kak Rio</li>
-						<li>Berikan remote kepada kak Rio</li>
-					</ol>
-				</section>
-				<section data-background-image="../../assets/pic/back.svg">
-					<p>Kita sebagai manusia tidak perlu perintah detail seperti itu karena kita mampu membuat keputusan sendiri, namun bagi robot mereka perlu perintah akurat seperti hal tersebut.</p>
-					<h3>Susunan Perintah Tersebut Kita Sebut Dengan <u>Algoritma</u></h3>
-				</section>
-				<section data-background-image="../../assets/pic/back.svg">
-					<h3>Apa langkah selanjutnya?</h3>
-					<p>Setelah kita membuat memikirkan robot tersebut akan dapat melakukan apa, maka langkah selanjutnya adalah mulai dengan membuat kode program.</p>
-				</section>
-				<section data-background-image="../../assets/pic/back.svg">
-					<h2>Mari Mulai</h2>
-					<p>Untuk memulai membangun robot, pastikan 4 hal berikut kamu lakukan:</p>
-					<ol>
-						<li>Kamu menginginkan robot melakukan apa?</li>
-						<li>Pikirkan setiap langkah kecil yang akan robot tersebut ambil.</li>
-						<li>Berikan perintah pada robot untuk setiap langkah tersebut.</li>
-						<li>Lihat apakah robot bekerja sesuai keinginan kamu. Perbaiki jika ada masalah.</li>
-					</ol>
+					<h2>Langkah 5 (Upload):</h2>
+					<h4>Agar coding dapat dijalankan oleh arduino, maka kita harus menguploadnya dengan cara :</h4>
+					<h4>1. Sambungkan arduino dengan komputer</h4>
+					<h4>2. Tekan tombol upload pada program</h4>
+					<br/>
+					<h4>Program sudah terpasang pada arduino.</h4>
 				</section>
 
 
