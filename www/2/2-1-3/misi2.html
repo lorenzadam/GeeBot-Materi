@@ -1,0 +1,102 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<script type="text/javascript" src="cordova.js"></script>
+
+		<title>Misi 2</title>
+
+		<link rel="stylesheet" href="../../css/reveal.css">
+		<link rel="stylesheet" href="../../css/theme/white.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="../../lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? '../../css/print/pdf.css' : '../../css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+		
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section data-background-image="../../assets/pic/back.svg">
+					<h1>Misi 2</h1>
+					<h3>Membuat Lampu Berkedip</h3>
+					<h4>Pengenalan</h4>
+				</section>
+					<section data-background-image="../../assets/pic/back.svg">
+					<h1>Tujuan</h1>
+					<h4>Membuat lampu berkedip terus - menerus dengan jeda yang kita tentukan.</h4>
+				</section>
+				</section>
+					<section data-background-image="../../assets/pic/back.svg">
+					<h1>Alat yang dibutuhkan</h1>
+					<h4>1. Sebuah Arduino</h4>
+					<h4>2. Sebuah Shield</h4>
+					<h4>3. Sebuah Modul LED</h4>
+					<h4>4. Sebuah Kabel</h4>
+				</section>
+				</section>
+					<section data-background-image="../../assets/pic/back.svg">
+					<h1>Langkah pertama (Kesepakatan):</h1>
+					<h4>Kita harus sepakati terlebih dahulu pin yang akan kita pakai pada arduino untuk misi kali ini adalah pin 3 (pin boleh pada nomer berapa saja asalkan yang dipilih adalah PIN DIGITAL)</h4>
+				</section>
+				<section data-background-image="../../assets/pic/back.svg">
+					<h2>Langkah kedua (Pemasangan Komponen):</h2>
+					<h4>1. Sambungkan Shield dengan Arduino</h4>
+					<h4>2. Sambungkan Kabel dengan modul LED</h4>
+					<h4>3. Sambungkan Kabel yang telah terhubung dengan modul LED dengan PIN 3 pada Shield yang telah terpasang di Arduino</h4>
+				</section>
+				<section data-background-image="../../assets/pic/back.svg">
+					<h2>Langkah 4 (Pemrograman)</h2>
+					<h4>Masukan kode program dibawah</h4>
+					<pre class="fragment"><code class="hljs" data-trim data-line-numbers="">
+void setup() {
+  pinMode(3, OUTPUT)
+}
+ 
+void loop() {  
+  digitalWrite(3, HIGH);
+  delay(1000);
+  digitalWrite(3, LOW);
+  delay(1000);
+}
+											</code></pre>
+				</section>
+				<section data-background-image="../../assets/pic/back.svg">
+					<h2>Langkah 5 (Upload):</h2>
+					<h4>Agar coding dapat dijalankan oleh arduino, maka kita harus menguploadnya dengan cara :</h4>
+					<h4>1. Sambungkan arduino dengan komputer</h4>
+					<h4>2. Tekan tombol upload pada program</h4>
+					<br/>
+					<h4>Program sudah terpasang pada arduino.</h4>
+				</section>
+
+
+			</div>
+		</div>
+
+		<script src="../../lib/js/head.min.js"></script>
+		<script src="../../js/reveal.js"></script>
+
+		<script>
+			// More info about config & dependencies:
+			// - https://github.com/hakimel/reveal.js#configuration
+			// - https://github.com/hakimel/reveal.js#dependencies
+			Reveal.initialize({
+				dependencies: [
+					{ src: '../../plugin/markdown/marked.js' },
+					{ src: '../../plugin/markdown/markdown.js' },
+					{ src: '../../plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+				]
+			});
+		</script>
+	</body>
+</html>
