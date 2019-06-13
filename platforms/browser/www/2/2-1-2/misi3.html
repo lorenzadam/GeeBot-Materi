@@ -5,7 +5,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 		<script type="text/javascript" src="cordova.js"></script>
 
-		<title>Misi 1</title>
+		<title>Misi 3</title>
 
 		<link rel="stylesheet" href="../../css/reveal.css">
 		<link rel="stylesheet" href="../../css/theme/white.css">
@@ -27,32 +27,32 @@
 		<div class="reveal">
 			<div class="slides">
 				<section data-background-image="../../assets/pic/back.svg">
-					<h1>Misi 1</h1>
-					<h3>Membuat LED Menyala</h3>
+					<h1>Misi 3</h1>
+					<h3>Gunakan 2 Warna LED Berbeda</h3>
 					<h4>Pengenalan</h4>
 				</section>
 					<section data-background-image="../../assets/pic/back.svg">
 					<h1>Tujuan</h1>
-					<h4>Membuat mobul LED dapat menyala dengan program yang dibuat.</h4>
+					<h4>Membuat 2 lampu dengan warna berbeda dan berkedip secara bergantian.</h4>
 				</section>
 				</section>
 					<section data-background-image="../../assets/pic/back.svg">
 					<h1>Alat yang dibutuhkan</h1>
 					<h4>1. Sebuah Arduino</h4>
 					<h4>2. Sebuah Shield</h4>
-					<h4>3. Sebuah Modul LED</h4>
-					<h4>4. Sebuah Kabel</h4>
+					<h4>3. 2 buah Modul LED</h4>
+					<h4>4. 2 buah Kabel</h4>
 				</section>
 				</section>
 					<section data-background-image="../../assets/pic/back.svg">
 					<h1>Langkah pertama (Kesepakatan):</h1>
-					<h4>Kita harus sepakati terlebih dahulu pin yang akan kita pakai pada arduino untuk misi kali ini adalah pin 3 (pin boleh pada nomer berapa saja asalkan yang dipilih adalah PIN DIGITAL)</h4>
+					<h4>Kita harus sepakati terlebih dahulu pin yang akan kita pakai pada arduino untuk misi kali ini adalah pin 3 untuk LED pertama dan pin 4 untuk LED kedua.</h4>
 				</section>
 				<section data-background-image="../../assets/pic/back.svg">
 					<h2>Langkah kedua (Pemasangan Komponen):</h2>
 					<h4>1. Sambungkan Shield dengan Arduino</h4>
 					<h4>2. Sambungkan Kabel dengan modul LED</h4>
-					<h4>3. Sambungkan Kabel yang telah terhubung dengan modul LED dengan PIN 3 pada Shield yang telah terpasang di Arduino</h4>
+					<h4>3. Sambungkan Kabel yang telah terhubung dengan modul LED dengan PIN 3 & 4 pada Shield yang telah terpasang di Arduino</h4>
 				</section>
 				<section data-background-image="../../assets/pic/back.svg">
 					<h2>Langkah 4 (Pemrograman)</h2>
@@ -60,10 +60,15 @@
 					<pre class="fragment"><code class="hljs" data-trim data-line-numbers="">
 void setup() {
   pinMode(3, OUTPUT)
+  pinMode(4, OUTPUT)
 }
  
 void loop() {  
   digitalWrite(3, HIGH);
+  digitalWrite(4, LOW);
+  delay(1000);
+  digitalWrite(3, LOW);
+  digitalWrite(4, HIGH);
   delay(1000);
 }
 											</code></pre>
