@@ -28,12 +28,12 @@
 			<div class="slides">
 				<section data-background-image="../../assets/pic/back.svg">
 					<h1>Misi 2</h1>
-					<h3>Membuat Lampu Berkedip</h3>
+					<h3>Membuat LED Menyala dengan Push Button Ditekan.</h3>
 					<h4>Pengenalan</h4>
 				</section>
 					<section data-background-image="../../assets/pic/back.svg">
 					<h1>Tujuan</h1>
-					<h4>Membuat lampu berkedip terus - menerus dengan jeda yang kita tentukan.</h4>
+					<h4>Membuat program agar modul LED dapat menyala ketika push button ditekan sekali, dan LED tidak mati ketika push button dilepas.</h4>
 				</section>
 				</section>
 					<section data-background-image="../../assets/pic/back.svg">
@@ -41,34 +41,44 @@
 					<h4>1. Sebuah Arduino</h4>
 					<h4>2. Sebuah Shield</h4>
 					<h4>3. Sebuah Modul LED</h4>
-					<h4>4. Sebuah Kabel</h4>
+					<h4>4. Sebuah Modul Push Button</h4>
+					<h4>5. 2 buah Kabel</h4>
 				</section>
 				</section>
 					<section data-background-image="../../assets/pic/back.svg">
 					<h1>Langkah pertama (Kesepakatan):</h1>
-					<h4>Kita harus sepakati terlebih dahulu pin yang akan kita pakai pada arduino untuk misi kali ini adalah pin 3 (pin boleh pada nomer berapa saja asalkan yang dipilih adalah PIN DIGITAL)</h4>
+					<h4>Kita harus sepakati terlebih dahulu pin yang akan kita pakai pada arduino untuk misi kali ini adalah pin 2 untuk push button dan pin 13 untuk LED</h4>
 				</section>
 				<section data-background-image="../../assets/pic/back.svg">
 					<h2>Langkah kedua (Pemasangan Komponen):</h2>
 					<h4>1. Sambungkan Shield dengan Arduino</h4>
 					<h4>2. Sambungkan Kabel dengan modul LED</h4>
-					<h4>3. Sambungkan Kabel yang telah terhubung dengan modul LED dengan PIN 3 pada Shield yang telah terpasang di Arduino</h4>
+					<h4>3. Sambungkan Kabel dengan modul Push Button</h4>
+					<h4>3. Sambungkan kabel yang telah terhubung dengan modul LED ke PIN 13 dan kabel yang terhubung dengan modul Push button ke PIN 2 pada Shield yang telah terpasang di Arduino</h4>
 				</section>
 				<section data-background-image="../../assets/pic/back.svg">
 					<h2>Langkah 4 (Pemrograman)</h2>
 					<h4>Masukan kode program dibawah</h4>
 					<pre class="fragment"><code class="hljs" data-trim data-line-numbers="">
+
+const int buttonPin = 2;     
+const int ledPin =  13;      
+int buttonState = 0;   
+int ledstate = 0;
+
 void setup() {
-  pinMode(3, OUTPUT)
+  pinMode(ledPin, OUTPUT);
+  pinMode(buttonPin, INPUT);
 }
- 
-void loop() {  
-  digitalWrite(3, HIGH);
-  delay(1000);
-  digitalWrite(3, LOW);
-  delay(1000);
-}
-											</code></pre>
+
+void loop() {
+  buttonState = digitalRead(buttonPin);
+  ledstate = digitalRead(ledPin);
+
+  if (buttonState == HIGH){
+    digitalWrite(ledPin, HIGH);
+  }  
+}											</code></pre>
 				</section>
 				<section data-background-image="../../assets/pic/back.svg">
 					<h2>Langkah 5 (Upload):</h2>

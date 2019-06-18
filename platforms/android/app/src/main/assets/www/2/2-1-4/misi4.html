@@ -5,7 +5,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 		<script type="text/javascript" src="cordova.js"></script>
 
-		<title>Misi 3</title>
+		<title>Misi 4</title>
 
 		<link rel="stylesheet" href="../../css/reveal.css">
 		<link rel="stylesheet" href="../../css/theme/white.css">
@@ -27,13 +27,13 @@
 		<div class="reveal">
 			<div class="slides">
 				<section data-background-image="../../assets/pic/back.svg">
-					<h1>Misi 3</h1>
-					<h3>Membuat LED dapat Menyala dan Mati dengan Push Button.</h3>
+					<h1>Misi 4</h1>
+					<h3>Membuat LED Berkedip Saat Push Button Ditahan.</h3>
 					<h4>Pengenalan</h4>
 				</section>
 					<section data-background-image="../../assets/pic/back.svg">
 					<h1>Tujuan</h1>
-					<h4>Membuat program agar modul LED yang mati dapat menyala ketika push button ditekan, dan LED yang menyala dapat mati ketika push button ditekan.</h4>
+					<h4>Membuat program agar modul LED yang mati dapat menyala berkedip ketika push button ditahan dengan jeda yang kita tentukan.</h4>
 				</section>
 				</section>
 					<section data-background-image="../../assets/pic/back.svg">
@@ -60,10 +60,11 @@
 					<h2>Langkah 4 (Pemrograman)</h2>
 					<h4>Masukan kode program dibawah</h4>
 					<pre class="fragment"><code class="hljs" data-trim data-line-numbers="">
-const int buttonPin = 2;   
-const int ledPin =  13; 
+const int buttonPin = 2;    
+const int ledPin =  13;     
 int buttonState = 0;   
 int ledstate = 0;
+int status = 0;
 
 void setup() {
   pinMode(ledPin, OUTPUT);
@@ -73,13 +74,13 @@ void setup() {
 void loop() {
   buttonState = digitalRead(buttonPin);
   ledstate = digitalRead(ledPin);
-  if ((buttonState == HIGH) && (ledstate == LOW)){
+ 
+  if (buttonState == HIGH){
     digitalWrite(ledPin, HIGH);
-  } 
-
-  if ((buttonState == HIGH) && (ledstate == HIGH)){
+    delay(1000);
     digitalWrite(ledPin, LOW);
-  } 
+    delay(1000);
+  }   
 }											</code></pre>
 				</section>
 				<section data-background-image="../../assets/pic/back.svg">
