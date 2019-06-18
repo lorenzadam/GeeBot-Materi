@@ -28,26 +28,23 @@
 			<div class="slides">
 				<section data-background-image="../../assets/pic/back.svg">
 					<h1>Misi 3</h1>
-					<h3>Membuat LED dapat Menyala dan Mati dengan Push Button.</h3>
+					<h3>Membuat Buzzer dapat Berbunyi dan Mati dengan Push Button.</h3>
 					<h4>Pengenalan</h4>
 				</section>
 					<section data-background-image="../../assets/pic/back.svg">
 					<h1>Tujuan</h1>
-					<h4>Membuat program agar modul LED yang mati dapat menyala ketika push button ditekan, dan LED yang menyala dapat mati ketika push button ditekan.</h4>
+					<h4>Membuat program agar modul buzzer yang mati dapat berbunyi ketika push button ditekan, dan buzzer yang berbunyi dapat mati ketika push button ditekan.</h4>
 				</section>
 				</section>
 					<section data-background-image="../../assets/pic/back.svg">
 					<h1>Alat yang dibutuhkan</h1>
 					<h4>1. Sebuah Arduino</h4>
-					<h4>2. Sebuah Shield</h4>
-					<h4>3. Sebuah Modul LED</h4>
-					<h4>4. Sebuah Modul Push Button</h4>
-					<h4>5. 2 buah Kabel</h4>
+					<h4>2. Sebuah Shield dilengkapi Buzzer</h4>
 				</section>
 				</section>
 					<section data-background-image="../../assets/pic/back.svg">
 					<h1>Langkah pertama (Kesepakatan):</h1>
-					<h4>Kita harus sepakati terlebih dahulu pin yang akan kita pakai pada arduino untuk misi kali ini adalah pin 2 untuk push button dan pin 13 untuk LED</h4>
+					<h4>Kita harus sepakati terlebih dahulu pin yang akan kita pakai pada arduino untuk misi kali ini adalah pin 2 untuk push button dan pin 11 untuk modul Buzzer.</h4>
 				</section>
 				<section data-background-image="../../assets/pic/back.svg">
 					<h2>Langkah kedua (Pemasangan Komponen):</h2>
@@ -60,26 +57,26 @@
 					<h2>Langkah 4 (Pemrograman)</h2>
 					<h4>Masukan kode program dibawah</h4>
 					<pre class="fragment"><code class="hljs" data-trim data-line-numbers="">
-const int buttonPin = 2;   
-const int ledPin =  13; 
-int buttonState = 0;   
-int ledstate = 0;
+const int buzzerPin = 11;
+const int buttonPin = 2;  
+int buttonState = 0; 
+int status = 0;
 
 void setup() {
-  pinMode(ledPin, OUTPUT);
-  pinMode(buttonPin, INPUT);
+ pinMode(buttonPin, INPUT);
 }
-
+ 
 void loop() {
-  buttonState = digitalRead(buttonPin);
-  ledstate = digitalRead(ledPin);
-  if ((buttonState == HIGH) && (ledstate == LOW)){
-    digitalWrite(ledPin, HIGH);
-  } 
-
-  if ((buttonState == HIGH) && (ledstate == HIGH)){
-    digitalWrite(ledPin, LOW);
-  } 
+   buttonState = digitalRead(buttonPin);
+   if ((buttonState == HIGH) && (status == 0)) {
+    status = 1;
+    tone(buzzerPin, 1000);
+    delay(1000);
+  } else if ((buttonState == HIGH) && (status == 1)){
+    status = 0; 
+    noTone(buzzerPin); 
+    delay(1000);
+ }
 }											</code></pre>
 				</section>
 				<section data-background-image="../../assets/pic/back.svg">
