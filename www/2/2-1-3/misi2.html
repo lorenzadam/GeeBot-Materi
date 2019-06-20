@@ -64,7 +64,6 @@
 const int buttonPin = 2;     
 const int ledPin =  13;      
 int buttonState = 0;   
-int ledstate = 0;
 
 void setup() {
   pinMode(ledPin, OUTPUT);
@@ -73,7 +72,6 @@ void setup() {
 
 void loop() {
   buttonState = digitalRead(buttonPin);
-  ledstate = digitalRead(ledPin);
 
   if (buttonState == HIGH){
     digitalWrite(ledPin, HIGH);
@@ -87,6 +85,10 @@ void loop() {
 					<h4>2. Tekan tombol upload pada program</h4>
 					<br/>
 					<h4>Program sudah terpasang pada arduino.</h4>
+				</section>
+				<section data-background-image="../../assets/pic/back.svg">
+					<h2>Keterangan:</h2>
+					<h4>buttonState harus dideklarasikan karena kita ingin mengetahui status dari Push Button (apakah sedang ditekan atau tidak).</h4>
 				</section>
 
 
