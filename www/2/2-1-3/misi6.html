@@ -59,59 +59,7 @@
 				<section data-background-image="../../assets/pic/back.svg">
 					<h2>Langkah 4 (Pemrograman)</h2>
 					<h4>Masukan kode program dibawah</h4>
-					<pre class="fragment"><code class="hljs" data-trim data-line-numbers="">
-const int buttonPin = 2;     
-const int ledPin =  13;     
-
-int buttonState = 0;
-int ledstate = 0;
-int status = 0;
-
-void setup() {
-  pinMode(ledPin, OUTPUT);
-  pinMode(buttonPin, INPUT);
-}
-
-void loop() {
-  buttonState = digitalRead(buttonPin);
-  ledstate = digitalRead(ledPin);
-
-  if (status == 0) {
-    if (buttonState == HIGH){
-      status = 1;
-    }
-  } else if (status == 1) {
-    if (buttonState == HIGH) {
-      status = 2;
-    }
-  } else if (status == 2) {
-    if (buttonState == HIGH) {
-      status = 3;
-    }
-  } else if (status == 3) {
-    if (buttonState == HIGH) {
-      status = 1;
-    }
-  }
-
-  if (status == 1 ) {
-    digitalWrite(ledPin, HIGH);
-    delay(2000);
-    digitalWrite(ledPin, LOW);
-    delay(2000);
-  }else if(status == 2){
-    digitalWrite(ledPin, HIGH);
-    delay(1000);
-    digitalWrite(ledPin, LOW);
-    delay(1000);
-  }else if(status == 3){
-    digitalWrite(ledPin, HIGH);
-    delay(500);
-    digitalWrite(ledPin, LOW);
-    delay(500);
-}
-}
-				</code></pre>
+					<img src="../../images/gambarmateri/2-1-3/2-1-3_misi6.png" align="center"></img>
 				</section>
 				<section data-background-image="../../assets/pic/back.svg">
 					<h2>Langkah 5 (Upload):</h2>
@@ -123,7 +71,8 @@ void loop() {
 				</section>
 				<section data-background-image="../../assets/pic/back.svg">
 					<h2>Keterangan:</h2>
-					<h4>Untuk perubahan jeda waktu pada modul LED maka kita menggunakan perubahan variabel "status".</h4>
+					<img src="../../images/gambarmateri/2-1-3/2-1-3_misi6_penjelasan1.png" align="center"></img>
+					<h4>blok "Atau jika.... kerjakan.." untuk menambah syarat lain dengan perintah lain yang harus dikerjakan.</h4>
 				</section>
 
 

@@ -59,28 +59,7 @@
 				<section data-background-image="../../assets/pic/back.svg">
 					<h2>Langkah 4 (Pemrograman)</h2>
 					<h4>Masukan kode program dibawah</h4>
-					<pre class="fragment"><code class="hljs" data-trim data-line-numbers="">
-const int buttonPin = 2;   
-const int ledPin =  13; 
-int buttonState = 0;   
-int ledstate = 0;
-
-void setup() {
-  pinMode(ledPin, OUTPUT);
-  pinMode(buttonPin, INPUT);
-}
-
-void loop() {
-  buttonState = digitalRead(buttonPin);
-  ledstate = digitalRead(ledPin);
-  if ((buttonState == HIGH) && (ledstate == LOW)){
-    digitalWrite(ledPin, HIGH);
-  } 
-
-  if ((buttonState == HIGH) && (ledstate == HIGH)){
-    digitalWrite(ledPin, LOW);
-  } 
-}											</code></pre>
+					<img src="../../images/gambarmateri/2-1-3/2-1-3_misi3.png" align="center"></img>
 				</section>
 				<section data-background-image="../../assets/pic/back.svg">
 					<h2>Langkah 5 (Upload):</h2>
@@ -92,11 +71,10 @@ void loop() {
 				</section>
 				<section data-background-image="../../assets/pic/back.svg">
 					<h2>Keterangan:</h2>
-					<h4>ledstate dideklarasikan karena kita ingin mengetahui status modul led(apakah sedang menyala atau mati).</h4>
-				</section>
-				<section data-background-image="../../assets/pic/back.svg">
-					<h2>Keterangan:</h2>
-					<h4>"&&" adalah operator yang menyatakan DAN, dimana jika terletak simbol tersebut, maka kedua syarat harus terpenuhi.</h4>
+					<img src="../../images/gambarmateri/2-1-3/2-1-3_misi3_penjelasan1.png" align="center"></img>
+					<h4>Blok diatas dibagi menjadi 2 yaitu :</h4>
+					<h4>"Arduino run first" : untuk mengatur awal sebelum program dijalankan.</h4>
+					<h4>"Arduino loop forever" : untuk membuat program yang nantinya akan terus-menerus dijalankan.</h4>
 				</section>
 
 

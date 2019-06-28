@@ -57,23 +57,7 @@
 				<section data-background-image="../../assets/pic/back.svg">
 					<h2>Langkah 4 (Pemrograman)</h2>
 					<h4>Masukan kode program dibawah</h4>
-					<pre class="fragment"><code class="hljs" data-trim data-line-numbers="">
-const int buzzerPin = 11;
-const int buttonPin = 2;  
- int buttonState = 0; 
-void setup() {
- pinMode(buttonPin, INPUT);
-}
- 
-void loop() {
-
-   buttonState = digitalRead(buttonPin);
-  if (buttonState == HIGH) {
-  tone(buzzerPin, 500);
-  } else {
-  noTone(buzzerPin); 
- }
-  											</code></pre>
+					<img src="../../images/gambarmateri/2-1-4/2-1-4_misi2.png" align="center"></img>
 				</section>
 				<section data-background-image="../../assets/pic/back.svg">
 					<h2>Langkah 5 (Upload):</h2>
@@ -85,7 +69,9 @@ void loop() {
 				</section>
 				<section data-background-image="../../assets/pic/back.svg">
 					<h2>Keterangan:</h2>
-					<h4>"noTone" adalah kode untuk membuat buzzer tidak berbunyi.</h4>
+					<img src="../../images/gambarmateri/2-1-4/2-1-4_misi2_penjelasan1.png" align="center"></img>
+					<h4>Blok diatas digunakan untuk mematikan bunyi buzzer pada pin yang ditentukan.</h4>
+					<h4>Pada contoh diatas berfungsi untuk mematikan bunyi buzzer pada pin 11.</h4>
 				</section>
 
 
