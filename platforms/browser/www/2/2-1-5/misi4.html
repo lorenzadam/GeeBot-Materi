@@ -1,0 +1,101 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<script type="text/javascript" src="cordova.js"></script>
+
+		<title>Misi 4</title>
+
+		<link rel="stylesheet" href="../../css/reveal.css">
+		<link rel="stylesheet" href="../../css/theme/white.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="../../lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? '../../css/print/pdf.css' : '../../css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+		
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section data-background-image="../../assets/pic/back.svg">
+					<h1>Misi 4</h1>
+					<h3>Membuat LED Berkedip Hanya Saat Inframerah Mendeteksi Objek.</h3>
+					<h4>Pengenalan</h4>
+				</section>
+					<section data-background-image="../../assets/pic/back.svg">
+					<h1>Tujuan</h1>
+					<h4>Membuat program agar LED berkedip dengan interval yang kita tentukan saat Inframerah Mendeteksi adanya objek didepannya.</h4>
+				</section>
+				</section>
+					<section data-background-image="../../assets/pic/back.svg">
+					<h1>Alat yang dibutuhkan</h1>
+					<h4>1. Sebuah Arduino</h4>
+					<h4>2. Sebuah Shield</h4>
+					<h4>3. Sebuah Modul LED</h4>
+					<h4>4. Sebuah Modul Sensor Inframerah</h4>
+					<h4>5. 2 buah Kabel</h4>
+				</section>
+				</section>
+					<section data-background-image="../../assets/pic/back.svg">
+					<h1>Langkah pertama (Kesepakatan):</h1>
+					<h4>Kita harus sepakati terlebih dahulu pin yang akan kita pakai pada arduino untuk misi kali ini adalah pin 2 untuk LED dan pin 3 untuk modul Sensor Inframerah.</h4>
+				</section>
+				<section data-background-image="../../assets/pic/back.svg">
+					<h2>Langkah kedua (Pemasangan Komponen):</h2>
+					<h4>1. Sambungkan Shield dengan Arduino</h4>
+					<h4>2. Sambungkan Kabel dengan modul LED</h4>
+					<h4>3. Sambungkan kabel yang telah terhubung dengan modul LED ke pin 2.</h4>
+					<h4>2. Sambungkan Kabel dengan modul Inframerah.</h4>
+					<h4>3. Sambungkan kabel yang telah terhubung dengan modul Inframerah ke pin 3.</h4>
+				</section>
+				<section data-background-image="../../assets/pic/back.svg">
+					<h2>Langkah 4 (Pemrograman)</h2>
+					<h4>Masukan kode program dibawah</h4>
+					<img src="../../images/gambarmateri/2-1-5/2-1-5_misi4.png" align="center"></img>
+				</section>
+				<section data-background-image="../../assets/pic/back.svg">
+					<h2>Langkah 5 (Upload):</h2>
+					<h4>Agar coding dapat dijalankan oleh arduino, maka kita harus menguploadnya dengan cara :</h4>
+					<h4>1. Sambungkan arduino dengan komputer</h4>
+					<h4>2. Tekan tombol upload pada program</h4>
+					<br/>
+					<h4>Program sudah terpasang pada arduino.</h4>
+				</section>
+				<section data-background-image="../../assets/pic/back.svg">
+					<h2>Keterangan:</h2>
+					<img src="../../images/gambarmateri/2-1-4/2-1-4_misi2_penjelasan1.png" align="center"></img>
+					<h4>Blok diatas digunakan untuk mematikan bunyi buzzer pada pin yang ditentukan.</h4>
+					<h4>Pada contoh diatas berfungsi untuk mematikan bunyi buzzer pada pin 11.</h4>
+				</section>
+
+
+
+			</div>
+		</div>
+
+		<script src="../../lib/js/head.min.js"></script>
+		<script src="../../js/reveal.js"></script>
+
+		<script>
+			// More info about config & dependencies:
+			// - https://github.com/hakimel/reveal.js#configuration
+			// - https://github.com/hakimel/reveal.js#dependencies
+			Reveal.initialize({
+				dependencies: [
+					{ src: '../../plugin/markdown/marked.js' },
+					{ src: '../../plugin/markdown/markdown.js' },
+					{ src: '../../plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+				]
+			});
+		</script>
+	</body>
+</html>
