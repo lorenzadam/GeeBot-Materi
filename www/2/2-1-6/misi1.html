@@ -22,6 +22,32 @@
 			document.getElementsByTagName( 'head' )[0].appendChild( link );
 		</script>
 		
+		<script src="../../js/Snap.svg-0.5.1/dist/snap.svg-min.js"></script>
+		<script>
+			window.onload = function () {
+//We'll be appending the icon to this DIV later
+            	var s = Snap("#iconDiv");
+//Have Snap load the SVG file
+				Snap.load("belajarsnap.svg", function(f) {
+//Assign the white rectangle
+                    silingkatan = f.select("#kotak");
+//Assign the whole icon group
+                    icon = f.select("#grup1");
+//When the icon is hovered over, have the white rectangle move up slightly with elastic properties
+                    icon.hover(function() {
+						silingkatan.animate({y:500.10000}, 500, mina.elastic);
+                    },
+//And return to original position when not hovered over
+                               function() {
+						silingkatan.animate({y:113.30357}, 500, mina.elastic);
+					}
+                    );
+//Finally append the icon to iconDiv in the body
+				s.append(f);
+				});		     
+			};
+		</script>
+			
 	</head>
 	<body>
 		<div class="reveal">
@@ -85,12 +111,18 @@
 					<h5>5. Frekuensi Ultrasonik 40 kHz.</h5>
 					<h5>6. Dapat dihubungkan langsung ke kaki mikrokontroler.</h5>
 				</section>
+				</section>
+					<section data-background-image="../../assets/pic/back.svg">
+						<div id="iconDiv"></div>	
+				</section>
 				
 			</div>
 		</div>
 
 		<script src="../../lib/js/head.min.js"></script>
 		<script src="../../js/reveal.js"></script>
+		
+
 
 		<script>
 			// More info about config & dependencies:
