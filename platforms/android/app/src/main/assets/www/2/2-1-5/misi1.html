@@ -1,0 +1,77 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<script type="text/javascript" src="cordova.js"></script>
+
+		<title>Misi 1</title>
+
+		<link rel="stylesheet" href="../../css/reveal.css">
+		<link rel="stylesheet" href="../../css/theme/white.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="../../lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? '../../css/print/pdf.css' : '../../css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+		
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section data-background-image="../../assets/pic/back.svg">
+					<h1>Misi 1</h1>
+					<h4>Pengenalan</h4>
+				</section>
+					<section data-background-image="../../assets/pic/back.svg">
+					<h1>Komponen pada Inframerah:</h1>
+					<h4>1. IR transmitter dilengkapi Lensa</h4>
+					<h4>2. IR receiver dilengkapi Lensa</h4>
+				</section>
+				</section>
+					<section data-background-image="../../assets/pic/back.svg">
+					<h1>Cara Kerja IR Transmitter :</h1>
+					<h4>Mengeluarkan cahaya untuk mendeteksi benda didepannya</h4>
+				</section>
+				</section>
+					<section data-background-image="../../assets/pic/back.svg">
+					<h1>Cara Kerja IR receiver :</h1>
+					<h4>Menerima pantulan cahaya dari IR Transmitter jika cahaya mengenai benda.</h4>
+				</section>
+				<section data-background-image="../../assets/pic/back.svg">
+					<h2>Cara Kerja Lensa :</h2>
+					<h4>Cahaya selalu menyebar kesegala arah, Lensa dibutuhkan agar cahaya yang keluar tertuju kesatu arah.</h4>
+					<img src="../../images/gambarmateri/2-1-4/2-1-4_misi1.png" align="center"></img>
+				</section>
+				<section data-background-image="../../assets/pic/back.svg">
+					<h2>Cara Kerja Sensor :</h2>
+					<h4>Cahaya dikeluarkan dari IR Transmitter, lalu oleh lensa ditujukan ke 1 arah, Jika terdapat benda didepan sensor,
+					Maka cahaya akan terpantul dan diterima oleh IR Receiver. Sensor Inframerah akan memberikan info jika dia menerima pantulan cahaya.</h4>
+				</section>
+			</div>
+		</div>
+
+		<script src="../../lib/js/head.min.js"></script>
+		<script src="../../js/reveal.js"></script>
+
+		<script>
+			// More info about config & dependencies:
+			// - https://github.com/hakimel/reveal.js#configuration
+			// - https://github.com/hakimel/reveal.js#dependencies
+			Reveal.initialize({
+				dependencies: [
+					{ src: '../../plugin/markdown/marked.js' },
+					{ src: '../../plugin/markdown/markdown.js' },
+					{ src: '../../plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+				]
+			});
+		</script>
+	</body>
+</html>
